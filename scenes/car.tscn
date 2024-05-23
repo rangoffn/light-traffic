@@ -1,0 +1,418 @@
+[gd_scene load_steps=86 format=3 uid="uid://dxpdu7xqdpax4"]
+
+[ext_resource type="Script" path="res://scripts/car.gd" id="1_hslnq"]
+[ext_resource type="Texture2D" uid="uid://dcatcd7o8lyrb" path="res://black car/черная машина без фар00.png" id="2_x287o"]
+[ext_resource type="Texture2D" uid="uid://b72mii8saynq3" path="res://images/11.png" id="6_4uy0w"]
+[ext_resource type="Texture2D" uid="uid://ibpr0v3s6yih" path="res://images/22.png" id="7_p8k2t"]
+[ext_resource type="Texture2D" uid="uid://bgy73ef1gale6" path="res://images/33.png" id="8_gd226"]
+[ext_resource type="Texture2D" uid="uid://500cpgy6dep4" path="res://black car/черная машина без фар07.png" id="9_d0xad"]
+[ext_resource type="Texture2D" uid="uid://b2q82dnvqy3rx" path="res://images/44.png" id="9_m53uj"]
+[ext_resource type="Texture2D" uid="uid://cbj4gkgeb0aoh" path="res://black car/черная машина без фар08.png" id="10_n0hfk"]
+[ext_resource type="Texture2D" uid="uid://c6s8gjyuf3p1l" path="res://black car/черная машина без фар09.png" id="11_ahsrq"]
+[ext_resource type="Texture2D" uid="uid://cuhfg8li22nxl" path="res://black car/черная машина без фар10.png" id="12_6a05g"]
+[ext_resource type="Texture2D" uid="uid://cywkq2o2mwdx4" path="res://black car/черная машина без фар11.png" id="13_66t6k"]
+[ext_resource type="Texture2D" uid="uid://dktxl1aejsn6q" path="res://black car/черная машина без фар12.png" id="14_k85h7"]
+[ext_resource type="Texture2D" uid="uid://b74sva70e5iv4" path="res://black car/черная машина без фар13.png" id="15_yoihk"]
+[ext_resource type="Texture2D" uid="uid://ckw70jgme74of" path="res://black car/черная машина без фар14.png" id="16_spdow"]
+[ext_resource type="Texture2D" uid="uid://beasj7h8ec5eq" path="res://black car/черная машина с фарами00.png" id="17_8pufc"]
+[ext_resource type="Texture2D" uid="uid://c1uw0rwhvj6dn" path="res://black car/черная машина с фарами07.png" id="24_vbj3w"]
+[ext_resource type="Texture2D" uid="uid://dkilnsbw214ss" path="res://black car/черная машина с фарами08.png" id="25_7gwbt"]
+[ext_resource type="Texture2D" uid="uid://i5i3pytw8bpt" path="res://black car/черная машина с фарами09.png" id="26_5fhbd"]
+[ext_resource type="Texture2D" uid="uid://cfwahbi4pyvkw" path="res://black car/черная машина с фарами10.png" id="27_fh0cb"]
+[ext_resource type="Texture2D" uid="uid://dgbauatwqx0rt" path="res://black car/черная машина с фарами11.png" id="28_qg1ly"]
+[ext_resource type="Texture2D" uid="uid://cem0ec8websb5" path="res://black car/черная машина с фарами12.png" id="29_ukkh8"]
+[ext_resource type="Texture2D" uid="uid://c8m2ak8mbotl3" path="res://black car/черная машина с фарами13.png" id="30_msnwu"]
+[ext_resource type="Texture2D" uid="uid://1ax5yax6etvp" path="res://black car/черная машина с фарами14.png" id="31_slkqn"]
+[ext_resource type="Texture2D" uid="uid://y1l82vvteg10" path="res://whitecar/car white00.png" id="32_8eemx"]
+[ext_resource type="Texture2D" uid="uid://d0npjv7tuic3x" path="res://whitecar/car white06.png" id="38_savd6"]
+[ext_resource type="Texture2D" uid="uid://cuonf2sek22kc" path="res://whitecar/car white07.png" id="39_oh7kx"]
+[ext_resource type="Texture2D" uid="uid://dkkliraqiwx08" path="res://whitecar/car white08.png" id="40_k1mm6"]
+[ext_resource type="Texture2D" uid="uid://bdrevbxop2gm5" path="res://whitecar/car white09.png" id="41_yu0gh"]
+[ext_resource type="Texture2D" uid="uid://dnp6mej7g2ovf" path="res://whitecar/car white10.png" id="42_n4afs"]
+[ext_resource type="Texture2D" uid="uid://dcjaj4xn11i7h" path="res://whitecar/car white11.png" id="43_ec7d5"]
+[ext_resource type="Texture2D" uid="uid://j7h57x7es053" path="res://whitecar/car white12.png" id="44_5hgwm"]
+[ext_resource type="Texture2D" uid="uid://cf67tajyub4u1" path="res://whitecar/car white13.png" id="45_l88gw"]
+[ext_resource type="Texture2D" uid="uid://5bo0b2dnjeiy" path="res://whitecar/car white14.png" id="46_fg8kh"]
+[ext_resource type="Texture2D" uid="uid://cwl4spov11db4" path="res://whitecar/машинка с фарами белая00.png" id="47_aw1u2"]
+[ext_resource type="Texture2D" uid="uid://crqns1etmxoqc" path="res://whitecar/машинка с фарами белая06.png" id="53_dga8h"]
+[ext_resource type="Texture2D" uid="uid://dnarikrrd66xu" path="res://whitecar/машинка с фарами белая07.png" id="54_32tc2"]
+[ext_resource type="Texture2D" uid="uid://kpmj3v33xy3" path="res://whitecar/машинка с фарами белая08.png" id="55_prhx8"]
+[ext_resource type="Texture2D" uid="uid://6mkogjnhianb" path="res://whitecar/машинка с фарами белая09.png" id="56_34j0q"]
+[ext_resource type="Texture2D" uid="uid://4a3qq53j6y63" path="res://whitecar/машинка с фарами белая10.png" id="57_sod88"]
+[ext_resource type="Texture2D" uid="uid://dvd0vh6laii65" path="res://whitecar/машинка с фарами белая11.png" id="58_1xi6l"]
+[ext_resource type="Texture2D" uid="uid://cs1n700mle1tw" path="res://whitecar/машинка с фарами белая12.png" id="59_qbasm"]
+[ext_resource type="Texture2D" uid="uid://d3ufgvtisl4la" path="res://whitecar/машинка с фарами белая13.png" id="60_o8b8y"]
+[ext_resource type="Texture2D" uid="uid://b3qxkhpxsyihw" path="res://whitecar/машинка с фарами белая14.png" id="61_aaoqx"]
+[ext_resource type="Texture2D" uid="uid://c0qywl6gh16rt" path="res://taxi/машина желтая без фар00.png" id="61_wfnew"]
+[ext_resource type="Texture2D" uid="uid://cmjt6eiuwvk1l" path="res://taxi/машина желтая без фар07.png" id="62_hllvt"]
+[ext_resource type="Texture2D" uid="uid://icdtkpi0j0y4" path="res://car red/машинка красная00.png" id="62_l6imp"]
+[ext_resource type="Texture2D" uid="uid://boxvkhu0vo8sg" path="res://taxi/машина желтая без фар08.png" id="63_rdwub"]
+[ext_resource type="Texture2D" uid="uid://bgbop2phqkd1j" path="res://taxi/машина желтая без фар09.png" id="64_uajsn"]
+[ext_resource type="Texture2D" uid="uid://c28sup1us3b73" path="res://taxi/машина желтая без фар10.png" id="65_6amu8"]
+[ext_resource type="Texture2D" uid="uid://d3xe3vajxwigl" path="res://taxi/машина желтая без фар11.png" id="66_fugin"]
+[ext_resource type="Texture2D" uid="uid://bxxyga8p2x7yx" path="res://taxi/машина желтая без фар12.png" id="67_tupp0"]
+[ext_resource type="Texture2D" uid="uid://c1f4fr7bfhca2" path="res://taxi/машина желтая без фар13.png" id="68_1o7r8"]
+[ext_resource type="Texture2D" uid="uid://dgox5754aopbb" path="res://car red/машинка красная06.png" id="68_2imxm"]
+[ext_resource type="Texture2D" uid="uid://vn0ucj5n8k4x" path="res://car red/машинка красная07.png" id="69_e8cgs"]
+[ext_resource type="Texture2D" uid="uid://cxyrloidsdrng" path="res://taxi/машина желтая без фар14.png" id="69_ikxfi"]
+[ext_resource type="Texture2D" uid="uid://csrahfr6mjkci" path="res://taxi/машина такси с фарами00.png" id="70_1bqbd"]
+[ext_resource type="Texture2D" uid="uid://bfrf53kvyok0m" path="res://car red/машинка красная08.png" id="70_rnnf4"]
+[ext_resource type="Texture2D" uid="uid://brcohwoato5h6" path="res://taxi/машина такси с фарами07.png" id="71_anerf"]
+[ext_resource type="Texture2D" uid="uid://hx2g6u0w6osy" path="res://car red/машинка красная09.png" id="71_ocplh"]
+[ext_resource type="Texture2D" uid="uid://bcjm8l0kf5g53" path="res://taxi/машина такси с фарами08.png" id="72_450bw"]
+[ext_resource type="Texture2D" uid="uid://da44vebuloj8s" path="res://car red/машинка красная10.png" id="72_fybaj"]
+[ext_resource type="Texture2D" uid="uid://cni0voajbbnmy" path="res://car red/машинка красная11.png" id="73_ugpad"]
+[ext_resource type="Texture2D" uid="uid://b6y6yxql36r3j" path="res://taxi/машина такси с фарами09.png" id="73_uyy1y"]
+[ext_resource type="Texture2D" uid="uid://0l326s7slk3c" path="res://car red/машинка красная12.png" id="74_if08x"]
+[ext_resource type="Texture2D" uid="uid://dib8h2ub2pa8n" path="res://taxi/машина такси с фарами10.png" id="74_v3vhy"]
+[ext_resource type="Texture2D" uid="uid://c6pohijgn3r0x" path="res://car red/машинка красная13.png" id="75_0ut65"]
+[ext_resource type="Texture2D" uid="uid://bv3x63ia516i5" path="res://taxi/машина такси с фарами11.png" id="75_fm8n0"]
+[ext_resource type="Texture2D" uid="uid://c8s11j12es7ec" path="res://car red/машинка красная14.png" id="76_7llqn"]
+[ext_resource type="Texture2D" uid="uid://0uf0ip4ax6ce" path="res://taxi/машина такси с фарами12.png" id="76_bd01v"]
+[ext_resource type="Texture2D" uid="uid://bbgoinsx7fvb8" path="res://taxi/машина такси с фарами13.png" id="77_61m4v"]
+[ext_resource type="Texture2D" uid="uid://b21fcy3yx371b" path="res://car red/машинка красная фары00.png" id="77_aulc2"]
+[ext_resource type="Texture2D" uid="uid://dkwnxcqjkfbor" path="res://taxi/машина такси с фарами14.png" id="78_ufg7x"]
+[ext_resource type="Texture2D" uid="uid://x2heciyulyi" path="res://car red/машинка красная фары05.png" id="82_6abe1"]
+[ext_resource type="Texture2D" uid="uid://dfh0i1mui74lr" path="res://car red/машинка красная фары06.png" id="83_s7yux"]
+[ext_resource type="Texture2D" uid="uid://dginyw4oq2gk1" path="res://car red/машинка красная фары07.png" id="84_1nkaw"]
+[ext_resource type="Texture2D" uid="uid://btdlvh32fv0s7" path="res://car red/машинка красная фары08.png" id="85_c05y1"]
+[ext_resource type="Texture2D" uid="uid://ddkiec8jfn7nk" path="res://car red/машинка красная фары09.png" id="86_clrik"]
+[ext_resource type="Texture2D" uid="uid://cddvui61n053g" path="res://car red/машинка красная фары10.png" id="87_tevgh"]
+[ext_resource type="Texture2D" uid="uid://cjyv86r3hb4pe" path="res://car red/машинка красная фары11.png" id="88_xnpgt"]
+[ext_resource type="Texture2D" uid="uid://b60nkcmoceufk" path="res://car red/машинка красная фары12.png" id="89_ar0le"]
+[ext_resource type="Texture2D" uid="uid://pmgxq8s58s77" path="res://car red/машинка красная фары13.png" id="90_5ssw6"]
+[ext_resource type="Texture2D" uid="uid://dllxe2ojxqpu4" path="res://car red/машинка красная фары14.png" id="91_b1jpn"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_85rje"]
+radius = 21.0
+height = 96.0
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_i3vc0"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_x287o")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_d0xad")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_n0hfk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_ahsrq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_6a05g")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_66t6k")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_k85h7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_yoihk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_spdow")
+}],
+"loop": false,
+"name": &"car1",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("17_8pufc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_vbj3w")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_7gwbt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_5fhbd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_fh0cb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_qg1ly")
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_ukkh8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_msnwu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("31_slkqn")
+}],
+"loop": true,
+"name": &"car1s",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("32_8eemx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("38_savd6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("39_oh7kx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("40_k1mm6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("41_yu0gh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("42_n4afs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("43_ec7d5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("44_5hgwm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("45_l88gw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("46_fg8kh")
+}],
+"loop": false,
+"name": &"car2",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("47_aw1u2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("53_dga8h")
+}, {
+"duration": 1.0,
+"texture": ExtResource("54_32tc2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("55_prhx8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("56_34j0q")
+}, {
+"duration": 1.0,
+"texture": ExtResource("57_sod88")
+}, {
+"duration": 1.0,
+"texture": ExtResource("58_1xi6l")
+}, {
+"duration": 1.0,
+"texture": ExtResource("59_qbasm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("60_o8b8y")
+}, {
+"duration": 1.0,
+"texture": ExtResource("61_aaoqx")
+}],
+"loop": true,
+"name": &"car2s",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("62_l6imp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("68_2imxm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("69_e8cgs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("70_rnnf4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("71_ocplh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("72_fybaj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("73_ugpad")
+}, {
+"duration": 1.0,
+"texture": ExtResource("74_if08x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("75_0ut65")
+}, {
+"duration": 1.0,
+"texture": ExtResource("76_7llqn")
+}],
+"loop": false,
+"name": &"car3",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("77_aulc2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("82_6abe1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("83_s7yux")
+}, {
+"duration": 1.0,
+"texture": ExtResource("84_1nkaw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("85_c05y1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("86_clrik")
+}, {
+"duration": 1.0,
+"texture": ExtResource("87_tevgh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("88_xnpgt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("89_ar0le")
+}, {
+"duration": 1.0,
+"texture": ExtResource("90_5ssw6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("91_b1jpn")
+}],
+"loop": true,
+"name": &"car3s",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("61_wfnew")
+}, {
+"duration": 1.0,
+"texture": ExtResource("62_hllvt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("63_rdwub")
+}, {
+"duration": 1.0,
+"texture": ExtResource("64_uajsn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("65_6amu8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("66_fugin")
+}, {
+"duration": 1.0,
+"texture": ExtResource("67_tupp0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("68_1o7r8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("69_ikxfi")
+}],
+"loop": false,
+"name": &"car4",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("70_1bqbd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("71_anerf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("72_450bw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("73_uyy1y")
+}, {
+"duration": 1.0,
+"texture": ExtResource("74_v3vhy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("75_fm8n0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("76_bd01v")
+}, {
+"duration": 1.0,
+"texture": ExtResource("77_61m4v")
+}, {
+"duration": 1.0,
+"texture": ExtResource("78_ufg7x")
+}],
+"loop": true,
+"name": &"car4s",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_4uy0w")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_p8k2t")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_gd226")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_m53uj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_m53uj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_m53uj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_m53uj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_4uy0w")
+}],
+"loop": false,
+"name": &"death",
+"speed": 40.0
+}]
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_wvgho"]
+a = Vector2(-4, -1)
+b = Vector2(9, -1)
+
+[node name="car" type="CharacterBody2D" groups=["cars"]]
+script = ExtResource("1_hslnq")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 5)
+shape = SubResource("CapsuleShape2D_85rje")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(-5.96046e-08, 3)
+scale = Vector2(0.176956, 0.169825)
+sprite_frames = SubResource("SpriteFrames_i3vc0")
+animation = &"car4s"
+
+[node name="detect car" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="detect car"]
+process_mode = 1
+position = Vector2(-3, -51)
+shape = SubResource("SegmentShape2D_wvgho")
+
+[connection signal="body_entered" from="detect car" to="." method="_on_detect_car_body_entered"]
+[connection signal="body_exited" from="detect car" to="." method="_on_detect_car_body_exited"]

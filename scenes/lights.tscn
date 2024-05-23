@@ -1,0 +1,72 @@
+[gd_scene load_steps=9 format=3 uid="uid://8l6e6m7tnorw"]
+
+[ext_resource type="Script" path="res://scripts/Button.gd" id="1_evhst"]
+[ext_resource type="Texture2D" uid="uid://0vgkhlk04i4g" path="res://images/ligts_test (2).png" id="1_k1h4p"]
+[ext_resource type="Script" path="res://scripts/lights.gd" id="3_4hefy"]
+[ext_resource type="Script" path="res://scenes/visible_procent.gd" id="3_pa6a4"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_p2k26"]
+atlas = ExtResource("1_k1h4p")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qp63a"]
+atlas = ExtResource("1_k1h4p")
+region = Rect2(0, 32, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_2lmti"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_p2k26")
+}],
+"loop": true,
+"name": &"green",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qp63a")
+}],
+"loop": true,
+"name": &"red",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ptib1"]
+radius = 9.48683
+
+[node name="lights" type="Node2D"]
+
+[node name="Button" type="Button" parent="."]
+self_modulate = Color(1, 1, 1, 0)
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_evhst")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Button"]
+position = Vector2(20, 20)
+scale = Vector2(2, 2)
+sprite_frames = SubResource("SpriteFrames_2lmti")
+animation = &"green"
+script = ExtResource("3_pa6a4")
+
+[node name="light_switch" type="Area2D" parent="."]
+script = ExtResource("3_4hefy")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="light_switch"]
+position = Vector2(0, 52)
+shape = SubResource("CircleShape2D_ptib1")
+
+[connection signal="pressed" from="Button" to="Button" method="_on_pressed"]
+[connection signal="animation_changed" from="Button/AnimatedSprite2D" to="Button" method="_on_animated_sprite_2d_animation_changed"]
+[connection signal="body_entered" from="light_switch" to="Button" method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="light_switch" to="Button" method="_on_area_2d_body_exited"]

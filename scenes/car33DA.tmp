@@ -1,0 +1,30 @@
+[gd_scene load_steps=5 format=3 uid="uid://dxpdu7xqdpax4"]
+
+[ext_resource type="Script" path="res://scripts/car.gd" id="1_hslnq"]
+[ext_resource type="Texture2D" uid="uid://buxix6h5yjcn3" path="res://images/car_test.png" id="2_pjykf"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_joqab"]
+height = 32.0
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_q3qtc"]
+radius = 17.0
+height = 44.0
+
+[node name="car" type="CharacterBody2D" groups=["cars"]]
+script = ExtResource("1_hslnq")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_joqab")
+
+[node name="CarTest" type="Sprite2D" parent="."]
+position = Vector2(0.337512, -0.162488)
+scale = Vector2(0.0302101, 0.0310338)
+texture = ExtResource("2_pjykf")
+
+[node name="detect car" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="detect car"]
+shape = SubResource("CapsuleShape2D_q3qtc")
+
+[connection signal="body_entered" from="detect car" to="." method="_on_detect_car_body_entered"]
+[connection signal="body_exited" from="detect car" to="." method="_on_detect_car_body_exited"]

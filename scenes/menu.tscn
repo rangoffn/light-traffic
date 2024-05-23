@@ -1,0 +1,45 @@
+[gd_scene load_steps=2 format=3 uid="uid://bpmnd1sndj2ia"]
+
+[ext_resource type="Script" path="res://scripts/menu.gd" id="1_mdglj"]
+
+[node name="menu" type="Node2D"]
+script = ExtResource("1_mdglj")
+
+[node name="1level" type="Button" parent="."]
+offset_left = 777.0
+offset_top = 125.0
+offset_right = 955.0
+offset_bottom = 234.0
+text = "1 level"
+
+[node name="play" type="Button" parent="."]
+offset_left = 106.0
+offset_top = 146.0
+offset_right = 266.0
+offset_bottom = 216.0
+theme_override_font_sizes/font_size = 39
+text = "infinity"
+
+[node name="quit" type="Button" parent="."]
+offset_left = 500.0
+offset_top = 400.0
+offset_right = 660.0
+offset_bottom = 470.0
+theme_override_font_sizes/font_size = 39
+text = "ВЫЙТИ"
+
+[node name="rules" type="Button" parent="."]
+offset_left = 480.0
+offset_top = 300.0
+offset_right = 680.0
+offset_bottom = 370.0
+theme_override_font_sizes/font_size = 39
+text = "ПРАВИЛА"
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(576, 324)
+
+[connection signal="pressed" from="1level" to="." method="_on_level_pressed"]
+[connection signal="pressed" from="play" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="quit" to="." method="_on_quit_pressed"]
+[connection signal="pressed" from="rules" to="." method="_on_rules_pressed"]

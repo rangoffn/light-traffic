@@ -1,0 +1,33 @@
+[gd_scene load_steps=2 format=3 uid="uid://nuf4f72lj7ix"]
+
+[ext_resource type="Script" path="res://scripts/win.gd" id="1_qoy7a"]
+
+[node name="win" type="Node2D"]
+script = ExtResource("1_qoy7a")
+
+[node name="win" type="Label" parent="."]
+offset_left = 440.0
+offset_top = 180.0
+offset_right = 740.0
+offset_bottom = 240.0
+theme_override_font_sizes/font_size = 39
+text = "УРА ПОБЕДА!!!"
+
+[node name="menu" type="Button" parent="."]
+offset_left = 500.0
+offset_top = 380.0
+offset_right = 660.0
+offset_bottom = 450.0
+theme_override_font_sizes/font_size = 39
+text = "МЕНЮ"
+
+[node name="exit" type="Button" parent="."]
+offset_left = 500.0
+offset_top = 500.0
+offset_right = 660.0
+offset_bottom = 570.0
+theme_override_font_sizes/font_size = 39
+text = "ВЫЙТИ"
+
+[connection signal="pressed" from="menu" to="." method="_on_menu_pressed"]
+[connection signal="pressed" from="exit" to="." method="_on_exit_pressed"]

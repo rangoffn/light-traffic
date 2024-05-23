@@ -1,0 +1,132 @@
+[gd_scene load_steps=25 format=3 uid="uid://dbv2iqb78okva"]
+
+[ext_resource type="Script" path="res://scenes/bus.gd" id="1_cedai"]
+[ext_resource type="Texture2D" uid="uid://drsfut6u322k7" path="res://1bus/52 без фар0.png" id="1_x1xmd"]
+[ext_resource type="Texture2D" uid="uid://dn8wtgcl21c01" path="res://1bus/52 без фар1.png" id="2_hh3mr"]
+[ext_resource type="Texture2D" uid="uid://c6t2sfaa1mlw4" path="res://1bus/52 без фар2.png" id="3_ag31a"]
+[ext_resource type="Texture2D" uid="uid://ds1t2cfagqvos" path="res://1bus/52 без фар3.png" id="4_fw528"]
+[ext_resource type="Texture2D" uid="uid://qhfdqwkhr081" path="res://1bus/52 без фар4.png" id="5_7fff8"]
+[ext_resource type="Texture2D" uid="uid://dirc86j23qcqo" path="res://1bus/52 без фар5.png" id="6_xkgeo"]
+[ext_resource type="Texture2D" uid="uid://b4hn0n6o0b0b2" path="res://1bus/52 без фар6.png" id="7_quwxl"]
+[ext_resource type="Texture2D" uid="uid://c7ka7eb76hdl1" path="res://1bus/52 без фар7.png" id="8_mde7e"]
+[ext_resource type="Texture2D" uid="uid://pwiyyckkie7j" path="res://1bus/52 с фарами0.png" id="9_7n11p"]
+[ext_resource type="Texture2D" uid="uid://brlnhantf7xyx" path="res://1bus/52 с фарами1.png" id="10_lvh6l"]
+[ext_resource type="Texture2D" uid="uid://dvbtb5oiooauc" path="res://1bus/52 с фарами2.png" id="11_2lwb7"]
+[ext_resource type="Texture2D" uid="uid://tcf5cam83qcx" path="res://1bus/52 с фарами3.png" id="12_8r2h6"]
+[ext_resource type="Texture2D" uid="uid://dnorh5g36xbhu" path="res://1bus/52 с фарами4.png" id="13_0rhu2"]
+[ext_resource type="Texture2D" uid="uid://b54fsgib0vu3k" path="res://1bus/52 с фарами5.png" id="14_yd6nj"]
+[ext_resource type="Texture2D" uid="uid://bbvgveelij5qa" path="res://1bus/52 с фарами6.png" id="15_ge3vp"]
+[ext_resource type="Texture2D" uid="uid://b3weoytmm58h8" path="res://1bus/52 с фарами7.png" id="16_6hqfp"]
+[ext_resource type="Texture2D" uid="uid://b72mii8saynq3" path="res://images/11.png" id="18_0kve0"]
+[ext_resource type="Texture2D" uid="uid://ibpr0v3s6yih" path="res://images/22.png" id="19_28otd"]
+[ext_resource type="Texture2D" uid="uid://bgy73ef1gale6" path="res://images/33.png" id="20_kwo6n"]
+[ext_resource type="Texture2D" uid="uid://b2q82dnvqy3rx" path="res://images/44.png" id="21_il7ff"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_k3hah"]
+radius = 31.0
+height = 146.0
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_86li5"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_x1xmd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_hh3mr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_ag31a")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_fw528")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_7fff8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_xkgeo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_quwxl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_mde7e")
+}],
+"loop": true,
+"name": &"car5",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("9_7n11p")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_lvh6l")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_2lwb7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_8r2h6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_0rhu2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_yd6nj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_ge3vp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_6hqfp")
+}],
+"loop": true,
+"name": &"car5s",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("18_0kve0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_28otd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_kwo6n")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_il7ff")
+}],
+"loop": false,
+"name": &"death",
+"speed": 30.0
+}]
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_2mpl4"]
+a = Vector2(-70.1736, -10.0248)
+b = Vector2(360.893, -10.0248)
+
+[node name="bus" type="CharacterBody2D" groups=["bus", "cars"]]
+process_mode = 1
+script = ExtResource("1_cedai")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_k3hah")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(-4.76837e-07, -4)
+scale = Vector2(0.0997526, 0.0997526)
+sprite_frames = SubResource("SpriteFrames_86li5")
+animation = &"car5"
+
+[node name="detect car" type="Area2D" parent="AnimatedSprite2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AnimatedSprite2D/detect car"]
+position = Vector2(-170.422, -731.811)
+scale = Vector2(1.01, 4.87)
+shape = SubResource("SegmentShape2D_2mpl4")
+
+[connection signal="body_entered" from="AnimatedSprite2D/detect car" to="." method="_on_detect_car_body_entered"]
+[connection signal="body_exited" from="AnimatedSprite2D/detect car" to="." method="_on_detect_car_body_exited"]

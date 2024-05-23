@@ -1,0 +1,86 @@
+[gd_scene load_steps=6 format=3 uid="uid://brn0tm852gwj8"]
+
+[ext_resource type="Script" path="res://scripts/rules.gd" id="1_5rj8h"]
+[ext_resource type="Texture2D" uid="uid://cqlwllbb14nm8" path="res://images/1.png" id="2_a4eky"]
+[ext_resource type="Texture2D" uid="uid://8o4wq4ebjgme" path="res://images/2.png" id="3_glik6"]
+[ext_resource type="Texture2D" uid="uid://dwv0lfpxeuiwr" path="res://images/3.png" id="4_c88hc"]
+[ext_resource type="Texture2D" uid="uid://cb4320ys84x3r" path="res://images/4.png" id="5_s42cv"]
+
+[node name="rules" type="Node2D"]
+script = ExtResource("1_5rj8h")
+
+[node name="1" type="Label" parent="."]
+offset_left = 54.0
+offset_top = 21.0
+offset_right = 399.0
+offset_bottom = 144.0
+theme_override_font_sizes/font_size = 30
+text = "1. Кликни светофор, 
+чтобы поменять цвет"
+
+[node name="2" type="Label" parent="."]
+offset_left = 54.0
+offset_top = 144.0
+offset_right = 413.0
+offset_bottom = 312.0
+theme_override_font_sizes/font_size = 30
+text = "2. По стрелке 
+автомобильчики
+поворачивают направо"
+
+[node name="3" type="Label" parent="."]
+offset_left = 54.0
+offset_top = 312.0
+offset_right = 395.0
+offset_bottom = 444.0
+theme_override_font_sizes/font_size = 30
+text = "3. Не допускай аварии 
+в зоне \"вафли\", у тебя
+три жизни"
+
+[node name="4" type="Label" parent="."]
+offset_left = 54.0
+offset_top = 466.0
+offset_right = 470.0
+offset_bottom = 508.0
+theme_override_font_sizes/font_size = 30
+text = "4. Следи за длиной пробки!"
+
+[node name="5" type="Label" parent="."]
+offset_left = 54.0
+offset_top = 522.0
+offset_right = 470.0
+offset_bottom = 609.0
+theme_override_font_sizes/font_size = 30
+text = "5. Набери 150 очков, 
+чтобы выиграть"
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(724, 157)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("2_a4eky")
+
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+position = Vector2(985, 157)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("3_glik6")
+
+[node name="Sprite2D3" type="Sprite2D" parent="."]
+position = Vector2(712, 361)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("4_c88hc")
+
+[node name="Sprite2D4" type="Sprite2D" parent="."]
+position = Vector2(969, 452)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("5_s42cv")
+
+[node name="play" type="Button" parent="."]
+offset_left = 628.0
+offset_top = 508.0
+offset_right = 788.0
+offset_bottom = 578.0
+theme_override_font_sizes/font_size = 39
+text = "ИГРАТЬ"
+
+[connection signal="pressed" from="play" to="." method="_on_play_pressed"]
